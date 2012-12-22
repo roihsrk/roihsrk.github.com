@@ -2,6 +2,12 @@
 ## Eclipse
 #################
 
+.sass-cache
+
+#################
+## Eclipse
+#################
+
 *.pydevproject
 .project
 .metadata
