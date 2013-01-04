@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <base href="{{ site.url }}">
+        <title>{{ page.title }} | {{ site.name }}</title>
+        <meta name="keywords" content="rovaniemi, rovaniemen helluntaiseurakunta, helluntaiseurakunta, helluntaikirkko, rovaniemen helluntaikirkko">
+        <meta name="description" content="Rovaniemen helluntaiseurakunta">
+
+        <meta name="viewport" content="width=device-width">
+        <link href="/stylesheets/app.css" rel="stylesheet">
+
+        <script src="/javascripts/foundation/modernizr.foundation.js"></script>
+
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('aside');
+            document.createElement('footer');
+        </script>
+        <![endif]-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+        <p class=chromeframe>Selaimesi on
+          <em>ikivanha!</em> <a href="http://browsehappy.com/">Päivitä toiseen
+              selaimeen</a> tai <a
+              href="http://www.google.com/chromeframe/?redirect=true">asenna
+              Google Chrome Frame</a> kokeaksesi tämän sivuston
+        </p><![endif]-->
+
+        <div class="row header">
+            <div class="twelve columns">
+                <h1>
+                    <a href="{{ site.url }}">
+                        {{ site.name }}
+                    </a>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row main">
+            <div class="twelve columns">
+                <div class="row">
+                    <div class="twelve columns nav">
+                        {% include main_nav.html %}
+                        <ul>
+                            <li>
+                                <a href="">Etusivu</a>
+                            </li>
+                            <li>
+                                <a href="">Keitä me olemme</a>
+                            </li>
+                            <li>
+                                <a href="">Työmuodot</a>
+                            </li>
+                            <li>
+                                <a href="">Kalenteri</a>
+                            </li>
+                            <li>
+                                <a href="">Media</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row content-header">
+                    <div class="nine columns">
+                        <h2>
+                            <a href="{{ page.url }}">
+                                {{ page.title }}
+                            </a>
+                        </h2>
+                        <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
+                    </div>
+                    <div class="three columns">
+                        <h2>Tulevia tapahtumia</h2>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="twelve columns">
+                        {{ content }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="footer">
+                        <ul>
+                            <li>
+                                <h6>Osoite</h6>
+                                <p>
+                                    Kairatie 37<br>
+                                    96100 ROVANIEMI
+                                </p>
+                            </li>
+                            <li>
+                                <h6>Pastori</h6>
+                                <p>
+                                    Esa Pikkumäki<br>
+                                    +358 40 7368 579
+                                </p>
+                            </li>
+                            <li>
+                                <h6>Nuorisotyöntekijä</h6>
+                                <p>
+                                    Mari Valui<br>
+                                    +358 12 1234 123
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Included JS Files (Uncompressed) -->
+        <script src="/javascripts/foundation/jquery.js"></script>
+
+        <script src="/javascripts/foundation/jquery.cookie.js"></script>
+
+        <script src="/javascripts/foundation/jquery.event.move.js"></script>
+
+        <script src="/javascripts/foundation/jquery.event.swipe.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.accordion.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.alerts.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.buttons.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.clearing.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.forms.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.joyride.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.magellan.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.navigation.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.orbit.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.reveal.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.tabs.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.tooltips.js"></script>
+
+        <script src="/javascripts/foundation/jquery.foundation.topbar.js"></script>
+
+        <script src="/javascripts/foundation/jquery.placeholder.js"></script>
+
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        {% if page.javascript %}
+        {% for js in page.javascript %}
+        <script src="/javascripts/{{ js }}"></script>
+        {% endfor %}
+        {% endif %}
+        <script src="/javascripts/site.js"></script>-->
+        <script>
+            //var _gaq=[ ['_setAccount','UA-33852684-1'],['_setDomainName', 'www.perhekotihokkanen.fi'],['_trackPageview'] ];
+            //(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
