@@ -4,7 +4,7 @@ title: Nuorisotyö
 header-image-name: tyomuodot-nuorisotyo.jpg
 header-text-position:
   right: true
-  top: 2%
+  top: 3%
 ---
 
 ### Meidän näkymme Elevate-toiminnasta
