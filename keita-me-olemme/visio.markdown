@@ -16,7 +16,8 @@ ja ihmisten kohtauspaikkana.**
 
 Haluamme yhdessä olla  matkalla tuon vision toteutumista kohti. Siihen matkaan antaa raamattukin rohkaisua sanomalla esimerkiksi:
 
-> Snl 11: 23 Hyvien toiveista koituu hyvää.
+> Hyvien toiveista koituu hyvää.
+> <cite>Snl 11: 23</cite>
 
 Tehtävämme tällä matkalla kohti näyn toteutumista on määritelty neliosaiseksi:
 
