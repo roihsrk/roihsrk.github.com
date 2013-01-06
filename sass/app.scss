@@ -110,6 +110,7 @@ body {
 			position: relative;
 
 			h2 {
+				@include adjust-font-size-to(30px, 1);
 				position: absolute;
 				background: rgba(255, 255, 255, 0.75);
 				padding: 15px 30px;
