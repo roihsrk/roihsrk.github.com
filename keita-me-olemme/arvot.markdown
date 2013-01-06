@@ -2,6 +2,9 @@
 layout: default
 title: Arvot
 header-image-name: keita-me-olemme-arvot.jpg
+header-text-position:
+  right: true
+  top: 35%
 ---
 ### SEURAKUNTAMME ARVOT
 

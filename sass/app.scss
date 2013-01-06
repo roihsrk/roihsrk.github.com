@@ -83,6 +83,7 @@ body {
 	@include trailer(4);
 
 	.nav {
+		margin-bottom: 15px;
 		background: $blue;
 
 		ul {
@@ -101,6 +102,33 @@ body {
 			color: #ffffff;
 			padding: 0 15px;
 			display: block;
+		}
+	}
+
+	.content-header {
+		.nine.columns {
+			position: relative;
+
+			h2 {
+				position: absolute;
+				background: rgba(255, 255, 255, 0.75);
+				padding: 15px 30px;
+
+				&.right {
+					right: 15px;
+					padding-right: 40px;
+				}
+
+				&.left {
+					left: 15px;
+					padding-left: 40px;
+				}
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 

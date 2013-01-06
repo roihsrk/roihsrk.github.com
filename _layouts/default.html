@@ -15,6 +15,14 @@
         <meta name="viewport" content="width=device-width">
         <link href="/stylesheets/app.css" rel="stylesheet">
 
+        <style>
+            {% if page.header-text-position %}
+                .main .content-header .nine.columns h2 {
+                    top: {{ page.header-text-position.top }};
+                }
+            {% endif %}
+        </style>
+
         <script src="/javascripts/foundation/modernizr.foundation.js"></script>
 
         <!--[if lt IE 9]>
@@ -74,7 +82,7 @@
                 </div>
                 <div class="row content-header">
                     <div class="nine columns">
-                        <h2>
+                        <h2 class="{% if page.header-text-position.right %}right{% else %}left{% endif %}">
                             <a href="{{ page.url }}">
                                 {{ page.title }}
                             </a>
