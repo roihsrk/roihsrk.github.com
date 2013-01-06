@@ -113,6 +113,9 @@ body {
 				position: absolute;
 				background: rgba(255, 255, 255, 0.75);
 				padding: 15px 30px;
+				margin: 0;
+				font-weight: normal;
+				color: $blue;
 
 				&.right {
 					right: 15px;

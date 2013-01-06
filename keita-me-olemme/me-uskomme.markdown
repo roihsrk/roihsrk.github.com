@@ -4,7 +4,7 @@ title: Me uskomme
 header-image-name: keita-me-olemme-me-uskomme.jpg
 header-text-position:
   right: true
-  top: 1%
+  top: 5%
 ---
 ### Helluntaiseurakunnan uskon pääkohdat
 

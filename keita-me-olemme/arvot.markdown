@@ -4,7 +4,7 @@ title: Arvot
 header-image-name: keita-me-olemme-arvot.jpg
 header-text-position:
   right: true
-  top: 35%
+  top: 41%
 ---
 ### SEURAKUNTAMME ARVOT
 

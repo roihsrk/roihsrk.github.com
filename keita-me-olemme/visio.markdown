@@ -4,7 +4,7 @@ title: Visio
 header-image-name: keita-me-olemme-visio.jpg
 header-text-position:
   right: false
-  top: 1%
+  top: 7%
 ---
 ### Rovaniemen Helluntaiseurakunnan näky 2017
 
