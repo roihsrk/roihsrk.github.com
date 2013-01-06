@@ -1,2 +1,4 @@
 url: http://127.0.0.1:4000/
 permalink: pretty
+name: Rovaniemen helluntaiseurakunta
+exclude: sass, config.rb, Procfile, Thumbs.db
