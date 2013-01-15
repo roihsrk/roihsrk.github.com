@@ -1,0 +1,193 @@
+/* line 11, ../sass/app.scss */
+body {
+  background: url(../images/rovaniemi.jpg) no-repeat center top;
+}
+
+/* line 15, ../sass/app.scss */
+.container {
+  *zoom: 1;
+  max-width: 39em;
+  _width: 39em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 59em) {
+  /* line 15, ../sass/app.scss */
+  .container {
+    max-width: 59em;
+  }
+}
+
+/* line 21, ../sass/app.scss */
+.header h1 a {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  background: url(../images/logo.png) no-repeat center top;
+  background-size: 100%;
+  height: 150px;
+  width: 357px;
+  margin: 20px auto;
+}
+
+/* line 33, ../sass/app.scss */
+.main {
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+  border: 3px solid #305586;
+  background: #ffffff;
+  margin-bottom: 5em;
+}
+/* line 39, ../sass/app.scss */
+.main .nav {
+  margin-bottom: 15px;
+  background: #305586;
+}
+/* line 43, ../sass/app.scss */
+.main .nav ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 50, ../sass/app.scss */
+.main .nav li {
+  display: inline-block;
+}
+/* line 54, ../sass/app.scss */
+.main .nav a {
+  font-size: 1.125em;
+  line-height: 2.22222em;
+  color: #ffffff;
+  padding: 0 15px;
+  display: block;
+}
+/* line 62, ../sass/app.scss */
+.main .image-and-title {
+  position: relative;
+}
+/* line 65, ../sass/app.scss */
+.main .image-and-title .padder {
+  padding: 0 15px;
+}
+/* line 69, ../sass/app.scss */
+.main .image-and-title h2 {
+  font-size: 1.875em;
+  line-height: 0.66667em;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 15px 30px;
+  margin: 0;
+  font-weight: normal;
+  color: #305586;
+}
+/* line 78, ../sass/app.scss */
+.main .image-and-title h2.right {
+  right: 15px;
+  padding-right: 40px;
+}
+/* line 83, ../sass/app.scss */
+.main .image-and-title h2.left {
+  left: 15px;
+  padding-left: 40px;
+}
+/* line 89, ../sass/app.scss */
+.main .image-and-title img {
+  width: 100%;
+  height: auto;
+}
+/* line 95, ../sass/app.scss */
+.main .content {
+  clear: both;
+}
+/* line 99, ../sass/app.scss */
+.main .footer {
+  padding-top: 0.625em;
+  padding-bottom: 1.25em;
+  clear: both;
+  background: #305586;
+}
+/* line 105, ../sass/app.scss */
+.main .footer h6, .main .footer p {
+  font-size: 0.875em;
+  line-height: 1.57143em;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+/* line 112, ../sass/app.scss */
+.main .footer ul {
+  *zoom: 1;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 38, ../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.main .footer ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 120, ../sass/app.scss */
+.main .footer li {
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
+  border-top: 2px solid white;
+}
+/* line 125, ../sass/app.scss */
+.main .footer li:first-child {
+  border-top: none;
+}
+/* line 129, ../sass/app.scss */
+.main .footer li h6, .main .footer li p {
+  display: inline;
+}
+/* line 133, ../sass/app.scss */
+.main .footer li br {
+  display: none;
+}
+
+@media (min-width: 59em) {
+  /* line 142, ../sass/app.scss */
+  .main .image-and-title {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 146, ../sass/app.scss */
+  .main .aside.events-or-nav {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 151, ../sass/app.scss */
+  .main .footer li {
+    width: 28.57143%;
+    float: left;
+    margin-right: 7.14286%;
+    border-top: none;
+  }
+  /* line 155, ../sass/app.scss */
+  .main .footer li:last-child {
+    width: 28.57143%;
+    float: right;
+    margin-right: 0;
+  }
+  /* line 159, ../sass/app.scss */
+  .main .footer li h6, .main .footer li p, .main .footer li br {
+    display: block;
+  }
+}
