@@ -60,24 +60,8 @@
             <div class="twelve columns">
                 <div class="row">
                     <div class="twelve columns nav">
-                        {% include main_nav.html %}
-                        <ul>
-                            <li>
-                                <a href="">Etusivu</a>
-                            </li>
-                            <li>
-                                <a href="">Keitä me olemme</a>
-                            </li>
-                            <li>
-                                <a href="">Työmuodot</a>
-                            </li>
-                            <li>
-                                <a href="">Kalenteri</a>
-                            </li>
-                            <li>
-                                <a href="">Media</a>
-                            </li>
-                        </ul>
+                        {% assign menu_items = site.menu %}
+                        {% include navigation_list.html %}
                     </div>
                 </div>
                 <div class="row content-header">
@@ -88,7 +72,12 @@
                         <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
                     </div>
                     <div class="three columns">
-                        <h2>Tulevia tapahtumia</h2>
+                        {% if page.url == "/index.html" %}
+                            <h2>Tulevia tapahtumia</h2>
+                        {% else %}
+                            {% assign menu_items = site.menu %}
+                            {% include navigation_list.html %}
+                        {% endif %}
                     </div>
                 </div>
                 <div class="row content">
