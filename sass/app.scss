@@ -1,65 +1,19 @@
 // Your custom settings file to override Foundation defaults
 @import "settings";
-
-// Comment out this import if you are customizing you imports below
-@import "foundation";
-
-// ----------------------------------------
-// Import specific parts of Foundation by commenting the import "foundation"
-// and uncommenting what you want below. You must uncomment the following if customizing
-
-// @import "compass/css3";
-// @import "foundation/settings";
-// @import "foundation/functions/all";
-
-// Control which mixins you have access too
-
-// @import "foundation/mixins/clearfix";
-// @import "foundation/mixins/css-triangle";
-// @import "foundation/mixins/font-size";
-
-// Must include next two for semantic grid to work
-
-// @import "foundation/mixins/respond-to";
-// @import "foundation/mixins/semantic-grid";
-
-// @import "modular-scale";
-// @import "foundation/common/globals";
-
-// Must include the grid for any responsiveness
-
-// @import "foundation/components/grid";
-
-// Control which common styles get compiled
-
-// @import "foundation/common/typography";
-// @import "foundation/common/forms";
-
-// Control which components you get if customizing
-
-// @import "foundation/components/modules/buttons";
-// @import "foundation/components/modules/tabs";
-// @import "foundation/components/modules/ui";
-// @import "foundation/components/modules/topbar";
-// @import "foundation/components/modules/navbar";
-// @import "foundation/components/modules/orbit";
-// @import "foundation/components/modules/reveal";
-// @import "foundation/components/modules/offcanvas";
-
-// Media Queries Overrides
-// @import "foundation/components/modules/mqueries";
-
 @import "compass/typography/text/replacement";
-
-$base-line-height: 20px;
-
 @import "compass/typography/vertical_rhythm";
+@import "compass/css3";
+@import "susy";
 
 $blue: rgb(48, 85, 134);
 $grey: rgb(109, 110, 113);
 
 body {
 	background: url(../images/rovaniemi.jpg) no-repeat center top;
+}
+
+.container {
+	@include container($total-columns, $break);
 }
 
 .header {
@@ -105,35 +59,41 @@ body {
 		}
 	}
 
-	.content-header {
-		.nine.columns {
-			position: relative;
+	.image-and-title {
+		position: relative;
 
-			h2 {
-				@include adjust-font-size-to(30px, 1);
-				position: absolute;
-				background: rgba(255, 255, 255, 0.75);
-				padding: 15px 30px;
-				margin: 0;
-				font-weight: normal;
-				color: $blue;
+		.padder {
+			padding: 0 15px;
+		}
 
-				&.right {
-					right: 15px;
-					padding-right: 40px;
-				}
+		h2 {
+			@include adjust-font-size-to(30px, 1);
+			position: absolute;
+			background: rgba(255, 255, 255, 0.75);
+			padding: 15px 30px;
+			margin: 0;
+			font-weight: normal;
+			color: $blue;
 
-				&.left {
-					left: 15px;
-					padding-left: 40px;
-				}
+			&.right {
+				right: 15px;
+				padding-right: 40px;
 			}
 
-			img {
-				width: 100%;
-				height: auto;
+			&.left {
+				left: 15px;
+				padding-left: 40px;
 			}
 		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.content {
+		clear: both;
 	}
 
 	.footer {
@@ -150,6 +110,7 @@ body {
 		}
 
 		ul {
+			@include pie-clearfix;
 			text-align: center;
 			list-style: none;
 			margin: 0;
@@ -157,13 +118,47 @@ body {
 		}
 
 		li {
-			display: inline-block;
-			padding: 0 45px;
-			border-left: 2px solid #ffffff;
-			text-align: left;
+			@include padding-leader(.5);
+			@include padding-trailer(.5);
+			border-top: 2px solid #ffffff;
 
 			&:first-child {
-				border-left: none;
+				border-top: none;
+			}
+
+			h6, p {
+				display: inline;
+			}
+
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+@include at-breakpoint($break) {
+	.main {
+		.image-and-title {
+			@include span-columns(8, $break);
+		}
+
+		.aside.events-or-nav {
+			@include span-columns(4 omega, 12);
+		}
+
+		.footer {
+			li {
+				@include span-columns(1, 3);
+				border-top: none;
+
+				&:last-child {
+					@include span-columns(1 omega, 3);
+				}
+
+				h6, p, br {
+					display: block;
+				}
 			}
 		}
 	}

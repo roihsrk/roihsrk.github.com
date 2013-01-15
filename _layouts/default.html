@@ -17,13 +17,13 @@
 
         <style>
             {% if page.header-text-position %}
-                .main .content-header .nine.columns h2 {
+                .main .image-and-title h2 {
                     top: {{ page.header-text-position.top }};
                 }
             {% endif %}
         </style>
 
-        <script src="/javascripts/foundation/modernizr.foundation.js"></script>
+        <!--<script src="/javascripts/foundation/modernizr.foundation.js"></script>-->
 
         <!--[if lt IE 9]>
         <script>
@@ -46,71 +46,63 @@
               Google Chrome Frame</a> kokeaksesi tämän sivuston
         </p><![endif]-->
 
-        <div class="row header">
-            <div class="twelve columns">
+        <div class="container">
+            <div class="header">
                 <h1>
                     <a href="{{ site.url }}">
                         {{ site.name }}
                     </a>
                 </h1>
             </div>
-        </div>
 
-        <div class="row main">
-            <div class="twelve columns">
-                <div class="row">
-                    <div class="twelve columns nav">
-                        {% assign menu_items = site.menu %}
-                        {% include navigation_list.html %}
-                    </div>
+            <div class="main">
+                <div class="nav">
+                    {% assign menu_items = site.menu %}
+                    {% include navigation_list.html %}
                 </div>
-                <div class="row content-header">
-                    <div class="nine columns">
+                <div class="image-and-title">
+                    <div class="padder">
                         <h2 class="{% if page.header-text-position.right %}right{% else %}left{% endif %}">
                             {{ page.title }}
                         </h2>
                         <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
                     </div>
-                    <div class="three columns">
-                        {% if page.url == "/index.html" %}
-                            <h2>Tulevia tapahtumia</h2>
-                        {% else %}
-                            {% assign menu_items = site.menu %}
-                            {% include navigation_list.html %}
-                        {% endif %}
-                    </div>
                 </div>
-                <div class="row content">
-                    <div class="twelve columns">
-                        {{ content }}
-                    </div>
+                <div class="aside events-or-nav">
+                    {% if page.url == "/index.html" %}
+                        <h2>Tulevia tapahtumia</h2>
+                    {% else %}
+                        {% assign menu_items = site.menu %}
+                        {% include navigation_list.html %}
+                    {% endif %}
                 </div>
-                <div class="row">
-                    <div class="footer">
-                        <ul>
-                            <li>
-                                <h6>Osoite</h6>
-                                <p>
-                                    Kairatie 37<br>
-                                    96100 ROVANIEMI
-                                </p>
-                            </li>
-                            <li>
-                                <h6>Pastori</h6>
-                                <p>
-                                    Esa Pikkumäki<br>
-                                    +358 40 7368 579
-                                </p>
-                            </li>
-                            <li>
-                                <h6>Nuorisotyöntekijä</h6>
-                                <p>
-                                    Mari Valui<br>
-                                    +358 12 1234 123
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="content">
+                    {{ content }}
+                </div>
+                <div class="footer">
+                    <ul>
+                        <li>
+                            <h6>Osoite</h6>
+                            <p>
+                                Kairatie 37<br>
+                                96100 ROVANIEMI
+                            </p>
+                        </li>
+                        <li>
+                            <h6>Pastori</h6>
+                            <p>
+                                Esa Pikkumäki<br>
+                                +358 40 7368 579
+                            </p>
+                        </li>
+                        <li>
+                            <h6>Nuorisotyöntekijä</h6>
+                            <p>
+                                Mari Valui<br>
+                                +358 12 1234 123
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
