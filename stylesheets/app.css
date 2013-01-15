@@ -446,27 +446,32 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 51, ../sass/app.scss */
+/* line 50, ../sass/app.scss */
+.main .nav ul ul {
+  display: none;
+}
+/* line 55, ../sass/app.scss */
 .main .nav li {
   display: inline-block;
 }
-/* line 55, ../sass/app.scss */
+/* line 59, ../sass/app.scss */
 .main .nav a {
   font-size: 1.125em;
   line-height: 2.22222em;
   color: #ffffff;
   padding: 0 15px;
   display: block;
+  text-decoration: none;
 }
-/* line 63, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 .main .image-and-title {
   position: relative;
 }
-/* line 66, ../sass/app.scss */
+/* line 71, ../sass/app.scss */
 .main .image-and-title .padder {
   padding: 0 15px;
 }
-/* line 70, ../sass/app.scss */
+/* line 75, ../sass/app.scss */
 .main .image-and-title h2 {
   font-size: 1.875em;
   line-height: 0.66667em;
@@ -477,33 +482,68 @@ body {
   font-weight: normal;
   color: #305586;
 }
-/* line 79, ../sass/app.scss */
+/* line 84, ../sass/app.scss */
 .main .image-and-title h2.right {
   right: 15px;
   padding-right: 40px;
 }
-/* line 84, ../sass/app.scss */
+/* line 89, ../sass/app.scss */
 .main .image-and-title h2.left {
   left: 15px;
   padding-left: 40px;
 }
-/* line 90, ../sass/app.scss */
+/* line 95, ../sass/app.scss */
 .main .image-and-title img {
   width: 100%;
   height: auto;
 }
-/* line 96, ../sass/app.scss */
+/* line 102, ../sass/app.scss */
+.main .events-or-nav ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+/* line 106, ../sass/app.scss */
+.main .events-or-nav ul li {
+  display: none;
+}
+/* line 109, ../sass/app.scss */
+.main .events-or-nav ul li.current {
+  display: block;
+}
+/* line 112, ../sass/app.scss */
+.main .events-or-nav ul li.current li {
+  display: block;
+}
+/* line 119, ../sass/app.scss */
+.main .events-or-nav > ul {
+  padding: 0 15px;
+}
+/* line 123, ../sass/app.scss */
+.main .events-or-nav li {
+  border-bottom: 1px solid #6d6e71;
+}
+/* line 126, ../sass/app.scss */
+.main .events-or-nav li:last-child {
+  border-bottom: none;
+}
+/* line 131, ../sass/app.scss */
+.main .events-or-nav a {
+  text-decoration: none;
+  color: #305586;
+}
+/* line 137, ../sass/app.scss */
 .main .content {
   clear: both;
+  padding: 20px 15px;
 }
-/* line 100, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .main .footer {
   padding-top: 0.625em;
   padding-bottom: 1.25em;
   clear: both;
   background: #305586;
 }
-/* line 106, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 .main .footer h6, .main .footer p {
   font-size: 0.875em;
   line-height: 1.57143em;
@@ -511,7 +551,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 113, ../sass/app.scss */
+/* line 155, ../sass/app.scss */
 .main .footer ul {
   *zoom: 1;
   text-align: center;
@@ -525,52 +565,52 @@ body {
   display: table;
   clear: both;
 }
-/* line 121, ../sass/app.scss */
+/* line 163, ../sass/app.scss */
 .main .footer li {
   padding-top: 0.625em;
   padding-bottom: 0.625em;
   border-top: 2px solid white;
 }
-/* line 126, ../sass/app.scss */
+/* line 168, ../sass/app.scss */
 .main .footer li:first-child {
   border-top: none;
 }
-/* line 130, ../sass/app.scss */
+/* line 172, ../sass/app.scss */
 .main .footer li h6, .main .footer li p {
   display: inline;
 }
-/* line 134, ../sass/app.scss */
+/* line 176, ../sass/app.scss */
 .main .footer li br {
   display: none;
 }
 
 @media (min-width: 59em) {
-  /* line 143, ../sass/app.scss */
+  /* line 185, ../sass/app.scss */
   .main .image-and-title {
-    width: 66.10169%;
+    width: 74.57627%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 147, ../sass/app.scss */
-  .main .aside.events-or-nav {
-    width: 32.20339%;
+  /* line 189, ../sass/app.scss */
+  .main .events-or-nav {
+    width: 23.72881%;
     float: right;
     margin-right: 0;
   }
-  /* line 152, ../sass/app.scss */
+  /* line 194, ../sass/app.scss */
   .main .footer li {
     width: 28.57143%;
     float: left;
     margin-right: 7.14286%;
     border-top: none;
   }
-  /* line 156, ../sass/app.scss */
+  /* line 198, ../sass/app.scss */
   .main .footer li:last-child {
     width: 28.57143%;
     float: right;
     margin-right: 0;
   }
-  /* line 160, ../sass/app.scss */
+  /* line 202, ../sass/app.scss */
   .main .footer li h6, .main .footer li p, .main .footer li br {
     display: block;
   }

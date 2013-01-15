@@ -46,6 +46,10 @@ body {
 			list-style: none;
 			margin: 0;
 			padding: 0;
+
+			ul {
+				display: none;
+			}
 		}
 
 		li {
@@ -57,6 +61,7 @@ body {
 			color: #ffffff;
 			padding: 0 15px;
 			display: block;
+			text-decoration: none;
 		}
 	}
 
@@ -93,8 +98,45 @@ body {
 		}
 	}
 
+	.events-or-nav {
+		ul {
+			margin-left: 0;
+			padding-left: 0;
+
+			li {
+				display: none;
+
+				&.current {
+					display: block;
+
+					li {
+						display: block;
+					}
+				}
+			}
+		}
+
+		&>ul {
+			padding: 0 15px;
+		}
+
+		li {
+			border-bottom: 1px solid $grey;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			color: $blue;
+		}
+	}
+
 	.content {
 		clear: both;
+		padding: 20px 15px;
 	}
 
 	.footer {
@@ -141,11 +183,11 @@ body {
 @include at-breakpoint($break) {
 	.main {
 		.image-and-title {
-			@include span-columns(8, $break);
+			@include span-columns(9, $break);
 		}
 
-		.aside.events-or-nav {
-			@include span-columns(4 omega, 12);
+		.events-or-nav {
+			@include span-columns(3 omega, 12);
 		}
 
 		.footer {
