@@ -1,5 +1,5 @@
 ---
-title: Vanhemmisto
+title: Keitä me olemme
 layout: default
 ---
 

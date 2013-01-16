@@ -1,5 +1,5 @@
 ---
-title: Vanhemmisto
+title: Lähetystyö
 layout: default
 ---
 
