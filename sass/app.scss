@@ -106,11 +106,26 @@ body {
 			li {
 				display: none;
 
+                a {
+                    color: #fff;
+                    background-color: $blue;
+                }
+
 				&.current {
 					display: block;
 
 					li {
 						display: block;
+                        a {
+                            color: $blue;
+                            background-color: #fff;
+                        }
+
+                        &.current {
+                            a {
+                                font-weight: bold;
+                            }
+                        }
 					}
 				}
 			}
@@ -130,7 +145,9 @@ body {
 
 		a {
 			text-decoration: none;
-			color: $blue;
+            display: block;
+            padding: 10px 25px;
+            @include adjust-font-size-to(18px, 1);
 		}
 	}
 
