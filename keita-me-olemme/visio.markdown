@@ -21,7 +21,7 @@ Haluamme yhdessä olla  matkalla tuon vision toteutumista kohti. Siihen matkaan
 
 Tehtävämme tällä matkalla kohti näyn toteutumista on määritelty neliosaiseksi:
 
-1. Tehtävämme on oman alueemme ihmisten evankelioiminen ja opetus-lapseuttaminen.
+1. Tehtävämme on oman alueemme ihmisten evankelioiminen ja opetuslapseuttaminen.
 
 2. Lähetystyön edistäminen 
 
