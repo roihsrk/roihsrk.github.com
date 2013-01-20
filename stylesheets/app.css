@@ -541,15 +541,13 @@ body {
     margin-right: 0;
   }
   .main .footer li {
-    width: 28.57143%;
-    float: left;
-    margin-right: 7.14286%;
+    display: inline-block;
     border-top: none;
+    border-left: 2px solid white;
+    padding: 0 20px;
   }
-  .main .footer li:last-child {
-    width: 28.57143%;
-    float: right;
-    margin-right: 0;
+  .main .footer li:first-child {
+    border-left: none;
   }
   .main .footer li h6, .main .footer li p, .main .footer li br {
     display: block;

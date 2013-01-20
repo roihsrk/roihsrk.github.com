@@ -209,12 +209,14 @@ body {
 
 		.footer {
 			li {
-				@include span-columns(1, 3);
-				border-top: none;
+                display: inline-block;
+                border-top: none;
+                border-left: 2px solid #ffffff;
+                padding: 0 20px;
 
-				&:last-child {
-					@include span-columns(1 omega, 3);
-				}
+                &:first-child {
+                    border-left: none;
+                }
 
 				h6, p, br {
 					display: block;
