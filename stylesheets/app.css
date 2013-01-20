@@ -425,11 +425,11 @@ body {
   color: #305586;
 }
 .main .image-and-title h2.right {
-  right: 15px;
+  right: 0;
   padding-right: 40px;
 }
 .main .image-and-title h2.left {
-  left: 15px;
+  left: 0;
   padding-left: 40px;
 }
 .main .image-and-title img {
