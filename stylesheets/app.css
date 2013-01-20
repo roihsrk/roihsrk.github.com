@@ -351,26 +351,6 @@ body {
   background: url(../images/rovaniemi.jpg) no-repeat center top;
 }
 
-.container {
-  *zoom: 1;
-  max-width: 39em;
-  _width: 39em;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media (min-width: 59em) {
-  .container {
-    max-width: 59em;
-  }
-}
-
 .header h1 a {
   text-indent: -119988px;
   overflow: hidden;
@@ -384,18 +364,21 @@ body {
 }
 
 .main {
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  -ms-border-radius: 9px;
-  -o-border-radius: 9px;
-  border-radius: 9px;
-  border: 3px solid #305586;
   background: #ffffff;
-  margin-bottom: 5em;
 }
-.main nav {
-  margin-bottom: 15px;
-  background: #305586;
+@media (min-width: 59em) {
+  .main {
+    max-width: 59em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 .main nav ul {
   margin: 0;
@@ -425,13 +408,11 @@ body {
   text-decoration: none;
 }
 .main > nav {
+  background: #305586;
   text-align: center;
 }
 .main .image-and-title {
   position: relative;
-}
-.main .image-and-title .padder {
-  padding: 0 15px;
 }
 .main .image-and-title h2 {
   font-size: 1.875em;
@@ -490,8 +471,9 @@ body {
   line-height: 1.11111em;
 }
 .main .content {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
   clear: both;
-  padding: 20px 15px;
 }
 .main .footer {
   padding-top: 0.625em;
@@ -533,7 +515,20 @@ body {
   display: none;
 }
 
-@media (min-width: 59em) {
+@media (min-width: 49em) {
+  .main {
+    margin-bottom: 5em;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    border-radius: 9px;
+    border: 3px solid #305586;
+  }
+  .main > nav {
+    margin: 0 -1em 15px;
+    padding: 0 1em;
+  }
   .main > nav > ul > li {
     display: inline-block;
   }
@@ -546,6 +541,10 @@ body {
     width: 23.72881%;
     float: right;
     margin-right: 0;
+  }
+  .main .footer {
+    margin: 0 -1em;
+    padding: 0 1em;
   }
   .main .footer li {
     display: inline-block;

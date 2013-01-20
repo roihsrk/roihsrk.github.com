@@ -14,7 +14,6 @@ body {
 }
 
 .container {
-	@include container($total-columns, $break);
 }
 
 .header {
@@ -32,15 +31,10 @@ body {
 }
 
 .main {
-	@include border-radius(9px);
-	border: 3px solid $blue;
+	@include container($total-columns $wide-columns);
 	background: #ffffff;
-	@include trailer(4);
 
     nav {
-        margin-bottom: 15px;
-        background: $blue;
-
         ul {
             margin: 0;
             padding: 0;
@@ -78,15 +72,12 @@ body {
     }
 
     &>nav {
+        background: $blue;
         text-align: center;
     }
 
 	.image-and-title {
 		position: relative;
-
-		.padder {
-			padding: 0 15px;
-		}
 
 		h2 {
 			@include adjust-font-size-to(30px, 1);
@@ -164,8 +155,9 @@ body {
 	}
 
 	.content {
+        @include padding-leader(1);
+        @include padding-trailer(1);
 		clear: both;
-		padding: 20px 15px;
 	}
 
 	.footer {
@@ -210,8 +202,15 @@ body {
 }
 
 @include at-breakpoint($break) {
-	.main {
+    .main {
+        @include trailer(4);
+        @include border-radius(9px);
+        border: 3px solid $blue;
+
         &>nav {
+            margin: 0 0 - $grid-padding 15px;
+            padding: 0 $grid-padding;
+
             &>ul {
                 &>li {
                     display: inline-block;
@@ -220,14 +219,17 @@ body {
         }
 
 		.image-and-title {
-			@include span-columns(9, $break);
+			@include span-columns(9, $wide-columns);
 		}
 
 		.events-or-nav {
-			@include span-columns(3 omega, 12);
+			@include span-columns(3 omega, $wide-columns);
 		}
 
 		.footer {
+            margin: 0 0 - $grid-padding;
+            padding: 0 $grid-padding;
+
 			li {
                 display: inline-block;
                 border-top: none;
