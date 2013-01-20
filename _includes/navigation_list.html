@@ -1,13 +1,12 @@
 <ul>
-  {% for menu_item in menu_items %}
-    {% assign parts = page.url | split: '/' %}
-    {% assign current = parts[1] | prepend: '/' | append: '/' %}
-    <li{% if current == menu_item.url or page.url == menu_item.url %} class="current"{% endif %}>
-      <a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
-      {% if menu_item.children %}
-        {% assign menu_items = menu_item.children %}
-        {% include navigation_list.html %}
-      {% endif %}
-    </li>
-  {% endfor %}
+    {% for menu_item in menu_items %}
+        {% include navigation_current_logic.html %}
+        <li{% if current %} class="{{ current }}"{% endif %}>
+            <a href="{{ menu_item.url }}">{{ menu_item.text }}</a>
+            {% if menu_item.children %}
+                {% assign menu_items = menu_item.children %}
+                {% include navigation_list.html %}
+            {% endif %}
+        </li>
+    {% endfor %}
 </ul>

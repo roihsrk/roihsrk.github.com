@@ -56,10 +56,10 @@
             </div>
 
             <div class="main">
-                <div class="nav">
+                <nav>
                     {% assign menu_items = site.menu %}
                     {% include navigation_list.html %}
-                </div>
+                </nav>
                 <div class="image-and-title">
                     <div class="padder">
                         <h2 class="{% if page.header-text-position.right %}right{% else %}left{% endif %}">
@@ -68,14 +68,16 @@
                         <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
                     </div>
                 </div>
-                <div class="aside events-or-nav">
+                <aside class="aside events-or-nav">
                     {% if page.url == "/index.html" %}
                         <h2>Tulevia tapahtumia</h2>
                     {% else %}
-                        {% assign menu_items = site.menu %}
-                        {% include navigation_list.html %}
+                        <nav>
+                            {% assign menu_items = site.menu %}
+                            {% include navigation_list.html %}
+                        </nav>
                     {% endif %}
-                </div>
+                </aside>
                 <div class="content">
                     {{ content }}
                 </div>

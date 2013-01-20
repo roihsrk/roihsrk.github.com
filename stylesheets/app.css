@@ -393,29 +393,39 @@ body {
   background: #ffffff;
   margin-bottom: 5em;
 }
-.main .nav {
+.main nav {
   margin-bottom: 15px;
   background: #305586;
 }
-.main .nav ul {
-  text-align: center;
-  list-style: none;
+.main nav ul {
   margin: 0;
   padding: 0;
 }
-.main .nav ul ul {
+.main nav ul ul {
   display: none;
 }
-.main .nav li {
-  display: inline-block;
+.main nav li {
+  display: block;
 }
-.main .nav a {
+.main nav .current, .main nav .path {
+  font-weight: 700;
+}
+.main nav .current > ul li, .main nav .path > ul li {
+  font-weight: 400;
+}
+.main nav .current > ul li.current, .main nav .current > ul li.path, .main nav .path > ul li.current, .main nav .path > ul li.path {
+  font-weight: 700;
+}
+.main nav a {
   font-size: 1.125em;
   line-height: 2.22222em;
-  color: #ffffff;
   padding: 0 15px;
+  color: #ffffff;
   display: block;
   text-decoration: none;
+}
+.main > nav {
+  text-align: center;
 }
 .main .image-and-title {
   position: relative;
@@ -445,38 +455,32 @@ body {
   width: 100%;
   height: auto;
 }
-.main .events-or-nav ul {
-  margin-left: 0;
-  padding-left: 0;
-}
-.main .events-or-nav ul li {
+.main aside nav li {
   display: none;
+  border-bottom: 1px solid #6d6e71;
 }
-.main .events-or-nav ul li a {
-  color: #fff;
-  background-color: #305586;
+.main aside nav li:last-child {
+  border-bottom: none;
 }
-.main .events-or-nav ul li.current {
+.main aside nav .current, .main aside nav .path {
   display: block;
 }
-.main .events-or-nav ul li.current li {
+.main aside nav .current > ul, .main aside nav .path > ul {
   display: block;
 }
-.main .events-or-nav ul li.current li a {
+.main aside nav .current > ul > li, .main aside nav .path > ul > li {
+  display: block;
+}
+.main aside nav .current > ul > li a, .main aside nav .path > ul > li a {
   color: #305586;
   background-color: #fff;
 }
-.main .events-or-nav ul li.current li.current a {
-  font-weight: bold;
+.main aside nav a {
+  color: #fff;
+  background-color: #305586;
 }
 .main .events-or-nav > ul {
   padding: 0 15px;
-}
-.main .events-or-nav li {
-  border-bottom: 1px solid #6d6e71;
-}
-.main .events-or-nav li:last-child {
-  border-bottom: none;
 }
 .main .events-or-nav a {
   text-decoration: none;
@@ -530,6 +534,9 @@ body {
 }
 
 @media (min-width: 59em) {
+  .main > nav > ul > li {
+    display: inline-block;
+  }
   .main .image-and-title {
     width: 74.57627%;
     float: left;

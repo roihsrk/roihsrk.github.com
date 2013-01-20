@@ -37,33 +37,49 @@ body {
 	background: #ffffff;
 	@include trailer(4);
 
-	.nav {
-		margin-bottom: 15px;
-		background: $blue;
+    nav {
+        margin-bottom: 15px;
+        background: $blue;
 
-		ul {
-			text-align: center;
-			list-style: none;
-			margin: 0;
-			padding: 0;
+        ul {
+            margin: 0;
+            padding: 0;
 
-			ul {
-				display: none;
-			}
-		}
+            ul {
+                display: none;
+            }
+        }
 
-		li {
-			display: inline-block;
-		}
+        li {
+            display: block;
+        }
 
-		a {
-			@include adjust-font-size-to(18px, 2);
-			color: #ffffff;
-			padding: 0 15px;
-			display: block;
-			text-decoration: none;
-		}
-	}
+        .current, .path {
+            font-weight: 700;
+
+            &>ul {
+                li {
+                    font-weight: 400;
+
+                    &.current, &.path {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        a {
+            @include adjust-font-size-to(18px, 2);
+            padding: 0 15px;
+            color: #ffffff;
+            display: block;
+            text-decoration: none;
+        }
+    }
+
+    &>nav {
+        text-align: center;
+    }
 
 	.image-and-title {
 		position: relative;
@@ -98,50 +114,46 @@ body {
 		}
 	}
 
-	.events-or-nav {
-		ul {
-			margin-left: 0;
-			padding-left: 0;
+    aside {
+        nav {
+            li {
+                display: none;
+                border-bottom: 1px solid $grey;
 
-			li {
-				display: none;
-
-                a {
-                    color: #fff;
-                    background-color: $blue;
+                &:last-child {
+                    border-bottom: none;
                 }
+            }
 
-				&.current {
-					display: block;
+            .current, .path {
+                display: block;
 
-					li {
-						display: block;
+                &>ul {
+                    display: block;
+
+                    &>li {
+                        display: block;
+
                         a {
                             color: $blue;
                             background-color: #fff;
                         }
+                    }
+                }
+            }
 
-                        &.current {
-                            a {
-                                font-weight: bold;
-                            }
-                        }
-					}
-				}
-			}
-		}
+            a {
+                color: #fff;
+                background-color: $blue;
+            }
+        }
+    }
 
+	.events-or-nav {
 		&>ul {
 			padding: 0 15px;
 		}
 
-		li {
-			border-bottom: 1px solid $grey;
-
-			&:last-child {
-				border-bottom: none;
-			}
-		}
 
 		a {
 			text-decoration: none;
@@ -199,6 +211,14 @@ body {
 
 @include at-breakpoint($break) {
 	.main {
+        &>nav {
+            &>ul {
+                &>li {
+                    display: inline-block;
+                }
+            }
+        }
+
 		.image-and-title {
 			@include span-columns(9, $break);
 		}

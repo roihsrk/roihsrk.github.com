@@ -5,33 +5,33 @@ menu:
 - text: Etusivu
   url: /
 - text: Keitä me olemme
-  url: /keita-me-olemme/
+  url: /keita-me-olemme
   children:
   - text: Visio
-    url: /keita-me-olemme/visio/
+    url: /keita-me-olemme/visio
   - text: Arvot
-    url: /keita-me-olemme/arvot/
+    url: /keita-me-olemme/arvot
   - text: Me uskomme
-    url: /keita-me-olemme/me-uskomme/
+    url: /keita-me-olemme/me-uskomme
   - text: Vanhemmisto
-    url: /keita-me-olemme/vanhemmisto/
+    url: /keita-me-olemme/vanhemmisto
   - text: Hallitus
-    url: /keita-me-olemme/hallitus/
+    url: /keita-me-olemme/hallitus
   - text: Palaute
-    url: /keita-me-olemme/palaute/
+    url: /keita-me-olemme/palaute
 - text: Työmuodot
-  url: /tyomuodot/
+  url: /tyomuodot
   children:
   - text: Nuorisotyö
-    url: /tyomuodot/nuorisotyo/
+    url: /tyomuodot/nuorisotyo
   - text: Lähteystyö
-    url: /tyomuodot/lahetystyo/
+    url: /tyomuodot/lahetystyo
   - text: Lapsityö
-    url: /tyomuodot/lapsityo/
+    url: /tyomuodot/lapsityo
   - text: Solut
-    url: /tyomuodot/solut/
+    url: /tyomuodot/solut
 - text: Kalenteri
-  url: /kalenteri/
+  url: /kalenteri
 - text: Media
-  url: /media/
+  url: /media
 exclude: sass, config.rb, Procfile, Thumbs.db
