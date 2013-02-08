@@ -1,10 +1,8 @@
 ---
 ---
 [
-    {% for item in site.categories.kalenteri %}{
-        title: "{{ item.title }}",
-        url: "{{ item.url }}",
-        time: "{{ item.time }}",
-        {% if item.repeat %}repeat: "{{ item.repeat }}"{% else %}date: "{{ item.date | date: '%d.%m.%Y' }}"{% endif %}
-    }{% unless forloop.last %}, {% endunless %}{% endfor %}
+  {% for item in site.categories.kalenteri %}
+    {% include calendar_item.json %}
+    {% unless forloop.last %}, {% endunless %}
+  {% endfor %}
 ]

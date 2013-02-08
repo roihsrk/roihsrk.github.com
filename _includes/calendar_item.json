@@ -1,0 +1,19 @@
+{
+  "title": "{{ item.title }}",
+  "url": "{{ item.url }}",
+  "time": "{{ item.time }}",
+  {% if item.repeat %}
+    "repeat":
+      {% case item.repeat %}
+        {% when 'sun' %}0
+        {% when 'mon' %}1
+        {% when 'tue' %}2
+        {% when 'wed' %}3
+        {% when 'thu' %}4
+        {% when 'fri' %}5
+        {% when 'sat' %}6
+      {% endcase %}
+  {% else %}
+    "date": "{{ item.date | date: '%d.%m.%Y' }}"
+  {% endif %}
+}
