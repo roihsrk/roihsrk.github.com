@@ -69,6 +69,12 @@
                 <aside class="aside events-or-nav">
                     {% if page.url == "/index.html" %}
                         <h2>Tulevia tapahtumia</h2>
+                        <ul data-bind="foreach: events">
+                            <li>
+                                <span data-bind="text: datetime"></span>
+                                <span data-bind="text: title"></span>
+                            </li>
+                        </ul>
                     {% else %}
                         <nav>
                             {% assign menu_items = site.menu %}
@@ -108,12 +114,13 @@
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="/javascripts/knockout.js"></script>
         <!--{% if page.javascript %}
         {% for js in page.javascript %}
         <script src="/javascripts/{{ js }}"></script>
         {% endfor %}
-        {% endif %}
-        <script src="/javascripts/site.js"></script>-->
+        {% endif %}-->
+        <script src="/javascripts/app.js"></script>
         <script>
             //var _gaq=[ ['_setAccount','UA-33852684-1'],['_setDomainName', 'www.perhekotihokkanen.fi'],['_trackPageview'] ];
             //(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
