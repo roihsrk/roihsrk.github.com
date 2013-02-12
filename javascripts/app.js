@@ -72,7 +72,9 @@ var build_calendar = function(data) {
     var time = null;
     var except_date = null;
     var started = new Date();
-    while (events_count < needs_n_events) {
+    var protect = 0;
+    while (events_count < needs_n_events && protect < 1000) {
+        protect += 1;
         d1 = ( new Date(d) ).setDate(d.getDate() + 1);
         filtered = data.filter(function(x) {
             if (x.except) {
