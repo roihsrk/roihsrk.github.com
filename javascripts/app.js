@@ -62,7 +62,7 @@ function AppViewModel() {
 var viewModel = new AppViewModel();
 ko.applyBindings(viewModel);
 
-$.getJSON('/kalenteri.json', function(data) {
+var build_calendar = function(data) {
     var events_count = 0;
     var needs_n_events = 5;
     var filtered = null;
@@ -117,4 +117,5 @@ $.getJSON('/kalenteri.json', function(data) {
 
     console.log("Building events took " + ( new Date() - started ) +
                 " milliseconds.");
-});
+};
+build_calendar(calendar_items);
