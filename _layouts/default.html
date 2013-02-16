@@ -70,11 +70,12 @@
                     {% if page.url == "/index.html" %}
                         <h2>Tulevia tapahtumia</h2>
                         <script>
+                            {% assign nowdate = site.time | date: "%Y-%m-%d" %}
                             var calendar_items = [
-                              {% for item in site.categories.kalenteri %}
-                                {% include calendar_item.json %}
-                                {% unless forloop.last %}, {% endunless %}
-                              {% endfor %}
+                                {% for item in site.categories.kalenteri %}
+                                    {% assign itemdate = item.date | date: "%Y-%m-%d" %}
+                                    {% if item.repeat or itemdate >= nowdate %}{% include calendar_item.json %},{% endif %}
+                                {% endfor %}
                             ];
                         </script>
                         <ul data-bind="foreach: events">
