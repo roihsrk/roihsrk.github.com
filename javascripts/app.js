@@ -52,6 +52,25 @@ function Event(title, datetime, url) {
     self.title = title;
     self.datetime = datetime;
     self.url = url;
+    self.year = ko.computed(function() {
+        return self.datetime.getYear();
+    });
+    self.month = ko.computed(function() {
+        var value = self.datetime.getMonth() + 1;
+        return value < 10 ? '0' + value : value;
+    });
+    self.date = ko.computed(function() {
+        var value = self.datetime.getDate();
+        return value < 10 ? '0' + value : value;
+    });
+    self.hour = ko.computed(function() {
+        var value = self.datetime.getHours();
+        return value < 10 ? '0' + value : value;
+    });
+    self.minute = ko.computed(function() {
+        var value = self.datetime.getMinutes();
+        return value < 10 ? '0' + value : value;
+    });
 }
 
 function AppViewModel() {

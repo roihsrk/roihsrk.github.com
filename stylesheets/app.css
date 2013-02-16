@@ -517,6 +517,26 @@ body {
 .main .footer li br {
   display: none;
 }
+.main .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main .item-list li {
+  margin: 0.25em 0;
+  padding: 0;
+}
+.main .datetime {
+  display: block;
+  background: #305586;
+  color: #ffffff;
+  padding: 0.2em 0.5em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
 
 @media (min-width: 49em) {
   .main {
