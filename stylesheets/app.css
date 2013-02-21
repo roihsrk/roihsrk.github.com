@@ -463,9 +463,6 @@ body {
   color: #fff;
   background-color: #305586;
 }
-.main .events-or-nav > ul {
-  padding: 0 15px;
-}
 .main .events-or-nav a {
   text-decoration: none;
   display: block;
@@ -526,16 +523,19 @@ body {
   margin: 0.25em 0;
   padding: 0;
 }
-.main .datetime {
+.main .date-wrapper {
   display: block;
-  background: #305586;
-  color: #ffffff;
-  padding: 0.2em 0.5em;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
+  color: #305586;
+}
+.main .date-wrapper .date {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.main .time-wrapper {
+  font-weight: bold;
+}
+.main .time-wrapper .separator:before {
+  content: ".";
 }
 
 @media (min-width: 49em) {
