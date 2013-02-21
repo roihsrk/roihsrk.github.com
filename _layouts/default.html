@@ -60,10 +60,14 @@
                 </nav>
                 <div class="image-and-title">
                     <div class="padder">
-                        <h2 class="{% if page.header-text-position.right %}right{% else %}left{% endif %}">
-                            {{ page.title }}
-                        </h2>
-                        <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
+                        {% if page.url == "/index.html" %}
+                            <img src="/images/content/headers/etusivu-default.jpg" alt="">
+                        {% else %}
+                            <h2 class="{% if page.header-text-position.right %}right{% else %}left{% endif %}">
+                                {{ page.title }}
+                            </h2>
+                            <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
+                        {% endif %}
                     </div>
                 </div>
                 <aside class="aside events-or-nav">
