@@ -55,13 +55,41 @@ function Event(title, datetime, url) {
     self.year = ko.computed(function() {
         return self.datetime.getYear();
     });
+    self.months = [
+        'tammi',
+        'helmi',
+        'maalis',
+        'huhti',
+        'touko',
+        'kesä',
+        'heinä',
+        'elo',
+        'syys',
+        'loka',
+        'marras',
+        'joulu'
+    ];
+    self.monthname = ko.computed(function() {
+        var month = self.datetime.getMonth();
+        return self.months[month];
+    })
     self.month = ko.computed(function() {
-        var value = self.datetime.getMonth() + 1;
+        return self.datetime.getMonth() + 1;
+    });
+    self.monthWithLeadingZero = ko.computed(function() {
+        var value = self.month();
         return value < 10 ? '0' + value : value;
     });
     self.date = ko.computed(function() {
-        var value = self.datetime.getDate();
+        return self.datetime.getDate();
+    });
+    self.dateWithLeadingZero = ko.computed(function() {
+        var value = self.date();
         return value < 10 ? '0' + value : value;
+    })
+    self.weekdates = ['su', 'ma', 'ti', 'ke', 'to', 'pe', 'la'];
+    self.weekdate = ko.computed(function() {
+        return self.weekdates[self.datetime.getDay()];
     });
     self.hour = ko.computed(function() {
         var value = self.datetime.getHours();
