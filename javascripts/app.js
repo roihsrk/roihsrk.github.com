@@ -71,8 +71,8 @@ function Event(title, datetime, url) {
     ];
     self.monthname = ko.computed(function() {
         var month = self.datetime.getMonth();
-        return self.months[month];
-    })
+        return self.months[month] + 'kuuta';
+    });
     self.month = ko.computed(function() {
         return self.datetime.getMonth() + 1;
     });
