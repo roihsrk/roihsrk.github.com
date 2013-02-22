@@ -351,6 +351,16 @@ body {
   background: url(../images/rovaniemi.jpg) no-repeat center top;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #305586;
+}
+
+#tervetuloa_kotiin {
+  font-size: 3em;
+  text-align: center;
+  margin: 0;
+}
+
 .header h1 {
   padding: 0 0.5em;
 }
