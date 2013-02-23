@@ -87,6 +87,10 @@ function Event(title, datetime, url) {
         var value = self.date();
         return value < 10 ? '0' + value : value;
     })
+    self.datenames = ['sunnuntai', 'maanantai', 'tiistai', 'keskiviikko', 'torstai', 'perjantai', 'lauantai'];
+    self.datename = ko.computed(function() {
+        return self.datenames[self.datetime.getDay()] + 'na';
+    });
     self.weekdates = ['su', 'ma', 'ti', 'ke', 'to', 'pe', 'la'];
     self.weekdate = ko.computed(function() {
         return self.weekdates[self.datetime.getDay()];
