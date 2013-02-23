@@ -503,10 +503,6 @@ h1, h2, h3, h4, h5, h6 {
 .main .footer li {
   padding-top: 0.625em;
   padding-bottom: 0.625em;
-  border-top: 2px solid white;
-}
-.main .footer li:first-child {
-  border-top: none;
 }
 .main .footer li h6, .main .footer li p {
   display: inline;
@@ -586,7 +582,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .main .footer li {
     display: inline-block;
-    border-top: none;
     border-left: 2px solid white;
     padding: 0 20px;
   }

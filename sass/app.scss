@@ -174,11 +174,6 @@ h1, h2, h3, h4, h5, h6 {
 		li {
 			@include padding-leader(.5);
 			@include padding-trailer(.5);
-			border-top: 2px solid #ffffff;
-
-			&:first-child {
-				border-top: none;
-			}
 
 			h6, p {
 				display: inline;
@@ -273,7 +268,6 @@ h1, h2, h3, h4, h5, h6 {
 
 			li {
                 display: inline-block;
-                border-top: none;
                 border-left: 2px solid #ffffff;
                 padding: 0 20px;
 
