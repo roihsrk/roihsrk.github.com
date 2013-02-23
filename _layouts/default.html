@@ -16,11 +16,13 @@
         <link href="/stylesheets/app.css" rel="stylesheet">
 
         <style>
-            {% if page.header-text-position %}
-                .main .image-and-title h2 {
+            .main .image-and-title h2 {
+                {% if page.header-text-position %}
                     top: {{ page.header-text-position.top }};
-                }
-            {% endif %}
+                {% else %}
+                    top: 71%;
+                {% endif %}
+            }
         </style>
 
         <!--[if lt IE 9]>
@@ -63,10 +65,14 @@
                         {% if page.url == "/index.html" %}
                             <img src="/images/content/headers/etusivu-default.jpg" alt="">
                         {% else %}
-                            <h2 class="{% if page.header-text-position.right %}right{% else %}left{% endif %}">
+                        <h2 class="{% if page.header-text-position %}{% if page.header-text-position.right %}right{% else %}left{% endif %}{% else %}right{% endif %}">
                                 {{ page.title }}
                             </h2>
-                            <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
+                            {% if page.header-image-name %}
+                                <img src="/images/content/headers/{{ page.header-image-name }}" alt="">
+                            {% else %}
+                                <img src="/images/content/headers/etusivu-default.jpg" alt="">
+                            {% endif %}
                         {% endif %}
                     </div>
                 </div>
