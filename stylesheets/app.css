@@ -544,9 +544,6 @@ h1, h2, h3, h4, h5, h6 {
 .main .time-wrapper {
   font-weight: bold;
 }
-.main .time-wrapper .separator:before {
-  content: ".";
-}
 
 @media (min-width: 49em) {
   .main {

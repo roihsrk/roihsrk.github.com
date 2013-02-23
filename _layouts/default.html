@@ -79,27 +79,7 @@
                 <aside class="aside events-or-nav">
                     {% if page.url == "/index.html" %}
                         <h2>Tulevia tapahtumia</h2>
-                        <script>
-                            {% assign nowdate = site.time | date: "%Y-%m-%d" %}
-                            var calendar_items = [
-                                {% for item in site.categories.kalenteri %}
-                                    {% assign itemdate = item.date | date: "%Y-%m-%d" %}
-                                    {% if item.repeat or itemdate >= nowdate %}{% include calendar_item.json %},{% endif %}
-                                {% endfor %}
-                            ];
-                        </script>
-                        <ul class="item-list events" data-bind="foreach: events">
-                            <li>
-                                <span class="date-wrapper">
-                                    <span class="date" data-bind="text: date() + '.'"></span>
-                                    <span class="monthname" data-bind="text: monthname"></span>
-                                </span>
-                                <span class="time-wrapper">
-                                    <span class="hour" data-bind="text:hour"></span><span class="separator"></span><span class="minute" data-bind="text: minute"></span>
-                                </span>
-                                <span data-bind="text: title"></span>
-                            </li>
-                        </ul>
+                        {% include calendar_items.html %}
                     {% else %}
                         <nav>
                             {% assign menu_items = site.menu %}
