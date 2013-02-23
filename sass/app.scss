@@ -62,8 +62,20 @@ h1, h2, h3, h4, h5, h6 {
 
         .current, .path {
             font-weight: 700;
+            display: block;
 
             &>ul {
+                display: block;
+
+                &>li {
+                    display: block;
+
+                    a {
+                        color: $blue;
+                        background-color: #fff;
+                    }
+                }
+
                 li {
                     font-weight: 400;
 
@@ -119,36 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 
     aside {
         nav {
-            li {
-                display: none;
-                border-bottom: 1px solid $grey;
-
-                &:last-child {
-                    border-bottom: none;
-                }
-            }
-
-            .current, .path {
-                display: block;
-
-                &>ul {
-                    display: block;
-
-                    &>li {
-                        display: block;
-
-                        a {
-                            color: $blue;
-                            background-color: #fff;
-                        }
-                    }
-                }
-            }
-
-            a {
-                color: #fff;
-                background-color: $blue;
-            }
+            display: none;
         }
     }
 
@@ -245,6 +228,34 @@ h1, h2, h3, h4, h5, h6 {
             &>ul {
                 &>li {
                     display: inline-block;
+                }
+            }
+
+            .current, .path {
+                display: inline-block;
+
+                ul {
+                    display: none;
+                }
+            }
+        }
+
+        aside {
+            nav {
+                display: block;
+
+                li {
+                    display: none;
+                    border-bottom: 1px solid $grey;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+
+                a {
+                    color: #fff;
+                    background-color: $blue;
                 }
             }
         }
